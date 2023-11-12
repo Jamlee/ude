@@ -1,0 +1,27 @@
+﻿  Building 'hostude' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  Stamping x64\Debug\hostude.inf
+  Stamping [Version] section with DriverVer=11/12/2023,2.16.59.787
+E:\code\pe\USB_UDE_Sample-master\USB_UDE_Sample-master\UDEFX_host\driver\hostude.inx(19-19): warning 1324: [Version] section should specify PnpLockdown=1 to prevent external apps from modifying installed driver files.
+E:\code\pe\USB_UDE_Sample-master\USB_UDE_Sample-master\UDEFX_host\driver\hostude.inx(35-35): warning 2083: Section [sampleclassreg] not referenced or used.
+  driver.c
+  device.c
+  ioctl.c
+  bulkrwr.c
+  Interrupt.c
+  正在生成代码...
+  hostude.vcxproj -> E:\code\pe\USB_UDE_Sample-master\USB_UDE_Sample-master\UDEFX_host\driver\x64\Debug\hostude.sys
+  Done Adding Additional Store
+  Successfully signed: E:\code\pe\USB_UDE_Sample-master\USB_UDE_Sample-master\UDEFX_host\driver\x64\Debug\hostude.sys
+  
+  catalog file for x64 debug
+  ..............................................................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  E:\code\pe\USB_UDE_Sample-master\USB_UDE_Sample-master\UDEFX_host\driver\x64\Debug\hostude.cat

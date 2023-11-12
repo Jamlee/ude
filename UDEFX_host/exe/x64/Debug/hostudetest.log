@@ -1,0 +1,3 @@
+﻿  Building 'hostudetest' with toolset 'WindowsApplicationForDrivers10.0' and the 'Universal' target platform.
+  hostudetest.vcxproj -> E:\code\pe\USB_UDE_Sample-master\USB_UDE_Sample-master\UDEFX_host\exe\x64\Debug\hostudetest.exe
+  Driver is 'Universal'.

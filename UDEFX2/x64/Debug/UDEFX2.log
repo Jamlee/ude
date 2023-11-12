@@ -1,0 +1,20 @@
+﻿  Building 'UDEFX2' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Debug\UDEFX2.inf
+  Stamping [Version] section with DriverVer=11/12/2023,1.18.59.76
+E:\code\pe\USB_UDE_Sample-master\USB_UDE_Sample-master\UDEFX2\UDEFX2.inf(5-5): warning 1324: [Version] section should specify PnpLockdown=1 to prevent external apps from modifying installed driver files.
+  UDEFX2.vcxproj -> E:\code\pe\USB_UDE_Sample-master\USB_UDE_Sample-master\UDEFX2\x64\Debug\UDEFX2.sys
+  Driver is 'Universal'.
+  ........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  E:\code\pe\USB_UDE_Sample-master\USB_UDE_Sample-master\UDEFX2\x64\Debug\UDEFX2\udefx2.cat
+  Done Adding Additional Store
+  Successfully signed: E:\code\pe\USB_UDE_Sample-master\USB_UDE_Sample-master\UDEFX2\x64\Debug\UDEFX2\udefx2.cat
+  

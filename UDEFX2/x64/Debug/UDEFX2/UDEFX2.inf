@@ -1,0 +1,83 @@
+;
+; UDEFX2.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=USB
+ClassGuid={36FC9E60-C465-11CF-8056-444553540000} ; used for all usb devices
+Provider=%ManufacturerName%
+CatalogFile=UDEFX2.cat
+DriverVer = 11/12/2023,1.18.59.76
+
+[DestinationDirs]
+DefaultDestDir = 12
+UDEFX2_Device_CoInstaller_CopyFiles = 11
+
+; ================= Class section =====================
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+UDEFX2.sys  = 1,,
+;
+
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64
+
+[Standard.NTamd64]
+%UDEFX2.DeviceDesc%=UDEFX2_Device, Root\UDEFX2
+
+[UDEFX2_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+UDEFX2.sys
+
+;-------------- Service installation
+[UDEFX2_Device.NT.Services]
+AddService = UDEFX2,%SPSVCINST_ASSOCSERVICE%, UDEFX2_Service_Inst
+
+; -------------- UDEFX2 driver install sections
+[UDEFX2_Service_Inst]
+DisplayName    = %UDEFX2.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\UDEFX2.sys
+
+;
+;--- UDEFX2_Device Coinstaller installation ------
+;
+
+[UDEFX2_Device.NT.CoInstallers]
+AddReg=UDEFX2_Device_CoInstaller_AddReg
+CopyFiles=UDEFX2_Device_CoInstaller_CopyFiles
+
+[UDEFX2_Device_CoInstaller_AddReg]
+;
+
+
+[UDEFX2_Device_CoInstaller_CopyFiles]
+;
+
+
+[UDEFX2_Device.NT.Wdf]
+KmdfService =  UDEFX2, UDEFX2_wdfsect
+[UDEFX2_wdfsect]
+KmdfLibraryVersion = 1.15
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="SurfaceBiz Education"
+ClassName="VirtualFX2"
+DiskName = "UDEFX2 Installation Disk"
+UDEFX2.DeviceDesc = "UDEFX2 Device"
+UDEFX2.SVCDESC = "UDEFX2 Service"
+
